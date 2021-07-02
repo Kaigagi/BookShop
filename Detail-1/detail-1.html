@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail</title>
     <link rel="stylesheet" href="style-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5db2b03919.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="script-detail.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +17,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+    <div class="bg">
+        <button class="button button1"><i class="fas fa-home"></i>  Home</button>
+    </div>
     <div class="background"></div>
-    <a href="../HomePage/index.html">
-        <p id="corners"><i class="material-icons">home</i>  Home</p>
-    </a>
     <div class="bookDetail">
         <div class="product">
             <div class="images">
@@ -42,13 +44,47 @@
             
         </div>
         <div class="seller-info">
-            <div id="sellerName">loading...</div>
-            <div id="rating">
-                <div class="rating"></div>
-                <div class="follow"></div>
+            <div id="sellerNameContainer">
+                <div class="logo">
+                    <img src="../Assets/logo.png" alt="logo" class="logoImage">
+                </div>
+                <div class="sellerName">
+                    <div style="margin-top: 30px;">Linh Đàm </div>
+                    <img src="	https://salt.tikicdn.com/ts/upload/29/4b/4a/c6765840a95e1ba5c7e51adb455f56a0.png" alt="official" 
+                    style="width: 80px;height: 20px;">
+                </div>
+            </div>
+            <div class="rating">
+                <div id="rating">
+                    <div> 4/5 <i class="fas fa-star"></i></div>
+                    <div style="font-size: small;margin-bottom: 15px;">5.4tr+</div>
+                    <button><i class="far fa-thumbs-up" style="width: 80%;height: 20px;
+                    border:none;font-size: 20px;padding: 5px;"></i>Đánh giá</button>
+                </div>
+                <div id="follow">
+                    <div>546k ++</div>
+                    <div style="font-size: small;margin-bottom: 15px;">follow</div>
+                    <button><i class="fas fa-plus-square" style="width: 80%;height: 20px;
+                    border:none;font-size: 20px;padding: 5px;"></i>Subcribe</button>
+                </div>
             </div>
             <div id="commit">
-                <i class="fas fa-star"></i>
+                <div class="commitContent">
+                    <div class="center"><img src="	https://frontend.tikicdn.com/_desktop-next/static/img/icons/compensation.svg" alt="" class="commitImage"></div>
+                    <div class="center commitText">Hoàn tiền 333% nếu hàng fake</div>
+                </div>
+                <div class="commitContent">
+                    <div class="center"><img src="	https://frontend.tikicdn.com/_desktop-next/static/img/icons/compensation.svg" alt="" class="commitImage"></div>
+                    <div class="center commitText">Mở hộp kiểm tra hàng nhận hàng</div>
+                </div>
+                <div class="commitContent">
+                    <div class="center"><img src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/refund.svg" alt="" class="commitImage"></div>
+                    <div class="center commitText" style="flex-direction: column;">
+                        <div>Đổi trả trong</div>
+                        <strong style="display: inline;">30 ngày</strong>
+                        <div>nếu sản phẩm lỗi</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -56,7 +92,12 @@
     <div id="description">
         <button class="show" onclick="show()">Show more</button>
     </div>
-    <div class="comment"></div>
+    <div id="comment">
+        <div class="commentTitle">Bình luận</div>
+        <div id="commentArea"></div>
+        <input type="text" id="commentInput" onkeypress="postCommentWithEnter(event)" placeholder="Put your comment here">
+        <button class="commentSubmit" onclick="postComment()"><i class="fas fa-angle-double-right"></i></button>
+    </div>
     <div class="footer"></div>
 </body>
 </html>

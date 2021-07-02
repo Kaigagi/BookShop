@@ -111,3 +111,30 @@ function putIntoStorage() {
     }, 10); 
 }
 
+function createComment(text) {
+    if(text == " ")
+    {
+        return;
+    }
+    let comment = document.createElement("div");
+    let commentBoard = document.getElementById("commentArea");
+    comment.classList.add("commentText");
+    comment.innerHTML = text;
+    commentBoard.appendChild(comment);
+    commentBoard.scrollTop = -1000;
+}
+
+function postComment() {
+    let commentInput = document.getElementById("commentInput");
+    createComment(commentInput.value);
+}
+
+function postCommentWithEnter(event) {
+    let commentInput = document.getElementById("commentInput");
+    if(event.key == "Enter")
+    {
+        postComment();
+        commentInput.value = " ";
+    }
+}
+

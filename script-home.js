@@ -46,7 +46,7 @@ database = {
                 '- Trích "Hoàng tử bé"',
                 "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, ....."
             ],
-            "image":"../Reference/Hoangtube.jpg",
+            "image":"../Reference/Hoangtube2.jpg",
             "images":[
                 "../Assets/HoangTuBe1.jpg",
                 "../Assets/HoangTuBe2.jpg",
